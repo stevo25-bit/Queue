@@ -1,4 +1,5 @@
 public class Test {
-    //Test
+    private int x= 1;
+
 
 }
