@@ -1,6 +1,6 @@
 package Fahrkarte;
 
-public class Mehrfahrkarte extends Fahrkarte {
+public class Mehrfahrkarte extends Fahrkarte implements Rueckfahrt {
     private int fahrten;
 
     public Mehrfahrkarte(double preis, int fahrten) {
@@ -15,12 +15,25 @@ public class Mehrfahrkarte extends Fahrkarte {
 
     // Überschreiben
     @Override
-    public boolean isGueltig() {
+    public boolean nutzen() {
         if (getGueltig()) {
             this.fahrten--;
             return true;
         } else {
             return false;
         }
+    }
+
+    @Override
+    public boolean nutzen (boolean mitRueckfahrt)
+    {
+        if (!mitRueckfahrt) return nutzen ();
+        else if (fahrten >= 2)
+        {
+            nutzen ();
+            nutzen ();
+            return true;
+        }
+        else return false;
     }
 }

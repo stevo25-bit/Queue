@@ -29,5 +29,5 @@ public abstract class Fahrkarte {
     }
 
     //Abstracte Klasse
-    public abstract boolean isGueltig();
+    public abstract boolean nutzen();
 }

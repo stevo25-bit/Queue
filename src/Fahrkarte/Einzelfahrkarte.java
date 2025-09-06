@@ -21,7 +21,7 @@ public class Einzelfahrkarte extends Fahrkarte{
     }
 
     @Override
-    public boolean isGueltig() {
+    public boolean nutzen() {
         if(getGueltig()) {
             entwerten();
             return true;
@@ -30,7 +30,6 @@ public class Einzelfahrkarte extends Fahrkarte{
         }
 
     }
-
 
 }
 
