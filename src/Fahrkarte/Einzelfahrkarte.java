@@ -20,6 +20,17 @@ public class Einzelfahrkarte extends Fahrkarte{
 
     }
 
+    @Override
+    public boolean isGueltig() {
+        if(getGueltig()) {
+            entwerten();
+            return true;
+        }else {
+            return false;
+        }
+
+    }
+
 
 }
 

@@ -27,4 +27,7 @@ public abstract class Fahrkarte {
     public String toString(){
         return String.valueOf(this.preis);
     }
+
+    //Abstracte Klasse
+    public abstract boolean isGueltig();
 }
