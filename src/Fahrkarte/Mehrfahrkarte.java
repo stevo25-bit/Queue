@@ -7,5 +7,9 @@ public class Mehrfahrkarte extends Fahrkarte {
         super(preis);
         this.fahrten = fahrten;
     }
-    //test
+
+    @Override
+    public String toString(){
+        return String.valueOf(getPreis())+ " "+ String.valueOf(this.fahrten);
+    }
 }
